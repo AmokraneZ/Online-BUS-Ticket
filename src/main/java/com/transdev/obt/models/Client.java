@@ -17,9 +17,6 @@ public class Client {
     @Column(nullable = false, unique = true)
     private String email;
 
-    @OneToMany
-    private Set<Reservation> reservation;
-
     public Client() {
     }
 

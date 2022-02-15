@@ -22,5 +22,6 @@ public class Reservation {
     private Client client;
 
     @OneToOne
+    @JoinColumn(nullable = true)
     private Bill bill;
 }

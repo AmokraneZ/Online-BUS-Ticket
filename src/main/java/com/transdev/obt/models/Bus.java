@@ -4,7 +4,6 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.sql.Time;
-import java.util.Set;
 @Data
 @Entity
 public class Bus {
@@ -18,7 +17,7 @@ public class Bus {
     @Column(nullable = false)
     private Time departureTime;
 
-    @ManyToMany
-    private Set<Reservation> reservations;
+    @Column(nullable = false)
+    private float price;
 
 }
