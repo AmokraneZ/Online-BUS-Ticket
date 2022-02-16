@@ -23,4 +23,7 @@ public class Bill {
 
     @Column
     private Date expirationDate;
+
+    @Column
+    private float amount;
 }

@@ -20,8 +20,4 @@ public class Reservation {
 
     @ManyToOne
     private Client client;
-
-    @OneToOne
-    @JoinColumn(nullable = true)
-    private Bill bill;
 }

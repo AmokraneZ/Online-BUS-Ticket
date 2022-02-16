@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+
 @Data
 @Service
 public class ReservationService {
@@ -28,5 +29,10 @@ public class ReservationService {
     public Reservation saveReservation(Reservation reservation) {
         Reservation savedReservation = reservationRepository.save(reservation);
         return savedReservation;
+    }
+
+    public float getTotalPrice(Long id){
+        Reservation reservation = reservationRepository.findById(id).orElse(null);
+        return reservation.getBuses().stream().map(x -> x.getPrice()).reduce(Float.valueOf(0), (a, b) -> a + b);
     }
 }

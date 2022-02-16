@@ -3,7 +3,6 @@ package com.transdev.obt.models;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Set;
 @Data
 @Entity
 public class Client {
